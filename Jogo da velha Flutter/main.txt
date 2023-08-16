@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'cadastro_screen.dart';
+import 'jogo_da_velha_screen.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Meu Jogo da Velha',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => CadastroScreen(),
+        // '/jogo_da_velha': (context) => JogoDaVelhaScreen(nome: '', email: '', senha: ''),
+      },
+    );
+  }
+}
